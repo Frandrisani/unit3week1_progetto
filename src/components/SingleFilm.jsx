@@ -25,30 +25,29 @@ class SingleFilm extends Component {
         }
       >
         {this.state.showCard ? (
-          <Card className="bg-dark">
+          <Card className="bg-dark text-white">
             <Card.Img
-              variant="top"
               src={this.props.poster}
               alt={this.props.title}
-              height={300}
+              className="img-fluid opacity-25"
             />
-            <Card.Body>
-              <Card.Title className="fs-5 text-start mt-0 text-white">
+            <Card.ImgOverlay className="shadow-lg ">
+              <Card.Title className="fs-2 fw-semibold text-start mt-0 text-white">
                 {this.props.title}
               </Card.Title>
               <div className="d-flex justify-content-between align-content-center">
                 <div className="d-flex">
-                  <Card.Text className="fs-6 text-white">
+                  <Card.Text className="fs-5 text-white">
                     {this.props.year}
                   </Card.Text>
-                  <i class="bi bi-slash text-white"></i>
-                  <Card.Text className="fs-6 text-white">
+                  <i class="bi bi-slash text-white fs-5"></i>
+                  <Card.Text className="fs-5 text-white">
                     {this.props.type}
                   </Card.Text>
                 </div>
-                <i className="bi bi-play-circle-fill text-white fs-1"></i>
+                <i className="bi bi-play-circle-fill text-white display-4"></i>
               </div>
-            </Card.Body>
+            </Card.ImgOverlay>
           </Card>
         ) : (
           <img
